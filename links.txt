@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=tHbCkikFfDE
+https://www.c-sharpcorner.com/article/socket-io-programming-with-example-in-node-js/
+https://medium.com/signature-networks/creating-a-chat-web-app-using-express-js-react-js-socket-io-1b01100a8ea5
+
+npx create-react-app my-app
+cd my-app
+cd src
+
+# If you're using a Mac or Linux:
+rm -f *
+
+# Or, if you're on Windows:
+del *
+
+# Then, switch back to the project folder
+cd ..
