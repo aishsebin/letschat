@@ -10,20 +10,13 @@ const client = new Client({
     user: "postgres",
     password: "postgres",
     database: "postgres"
-  });
+});
 
-  const connect = ()=>{
-    client.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        client.query('select username from public.chatlog', function (err, result) {
-          if (err) throw err;
-          console.log(result.rows);
-        });
-      });
-}
+client.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
 
-connect();
 
 users=[];
 connections=[];
@@ -31,7 +24,7 @@ connections=[];
 server.listen(process.env.PORT || 3000);
 console.log('Server running');
 app.get('/',function(req,res){
-    res.sendFile(__dirname+'/index.html');
+    res.sendFile(__dirname+'/index2.html');
 });
 
 io.sockets.on('connection',function(socket){
@@ -53,12 +46,28 @@ io.sockets.on('connection',function(socket){
         
     });
 
-    socket.on('new user', function(data,callback){
-        callback(true);
+    socket.on('new user', function(data){
+        // callback(true);
         socket.username=data;
-
-        users.push(socket.username);
-        updateUsernames();
+        console.log(socket.username);
+        client.query('select * from public.chatlog where username=$1',[socket.username], function (err, result) {
+            if (err) throw err;
+            if(result.rows.length!=0){
+                console.log(result.rows);
+                users.push(socket.username);
+                updateUsernames();
+                io.sockets.emit('user status',"valid");
+                
+            }
+            else{
+                io.sockets.emit('user status',"invalid");
+            }
+            
+            
+        });
+          // client.end();    
+        
+        
 
     });
     
