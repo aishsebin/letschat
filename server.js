@@ -31,7 +31,7 @@ app.get('/',function(req,res){
       ];
     
       res.json(customers);
-    // res.sendFile(__dirname+'/index.html');
+    // res.sendFile(__dirname+'/example.html');
 });
 
 // io.sockets.on('connection',function(socket){
