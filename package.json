@@ -18,9 +18,17 @@
     "nodemon": "^1.14.6"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "concurrently": "^4.1.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "create-react-app": "^3.0.1",
     "express": "^4.17.1",
-    "pg": "^7.11.0"
+    "express-session": "^1.16.2",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "pg": "^7.11.0",
+    "socket.io": "^2.2.0"
   }
 }

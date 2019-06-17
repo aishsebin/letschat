@@ -1,0 +1,74 @@
+// class App extends Component {
+
+//   state={
+//     users:[]
+//   }
+
+//   componentDidMount(){
+//     this.getUsers();
+//   }
+
+//   getUsers=_=>{
+//     fetch('http://localhost:5000')
+//     .then(response=>response.json())
+//     .then(response=>this.setState({ products:response.data }))
+//     .catch(err => console.error(err))
+//   }
+
+//   renderUser=({ user_id,name })=><div key={user_id}>{name}</div>
+  
+//   render(){
+//     const { users }=this.state;
+  
+//     return (
+//       <div className="App">
+//         {users.map(this.renderUser)}
+//         {/* <Login /> */}
+//       </div>
+//     );
+//   }
+// }
+
+// class App extends Component {
+
+//   state={
+//     users:[]
+//   }
+
+//   componentDidMount(){
+//     this.getUsers();
+//   }
+
+//   getUsers=_=>{
+//     fetch('http://localhost:5000')
+//     .then(response=>response.json())
+//     .then(response=>this.setState({ products:response.data }))
+//     .catch(err => console.error(err))
+//   }
+
+//   renderUser=({ user_id,name })=><div key={user_id}>{name}</div>
+  
+//   render(){
+//     const { users }=this.state;
+  
+//     return (
+//       <div className="App">
+//         {users.map(this.renderUser)}
+//         {/* <Login /> */}
+//       </div>
+//     );
+//   }
+// }
+react node sql
+https://www.youtube.com/watch?v=HPIjjFGYSJ4
+
+models sql
+https://stackoverflow.com/questions/38980031/node-js-mysql-model-designing
+
+MERN
+https://www.youtube.com/watch?v=s1swJLYxLAA
+
+passport
+https://scotch.io/tutorials/easy-node-authentication-setup-and-local
+https://blog.risingstack.com/node-hero-node-js-authentication-passport-js/
+https://www.youtube.com/watch?v=UHNFnM-2KUk
