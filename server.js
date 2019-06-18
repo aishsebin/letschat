@@ -56,13 +56,13 @@ console.log('Server running');
 //     // res.sendFile(__dirname+'/example.html');
 // });
 
-io.sockets.on('connection',function(socket){
+io.on('connection',function(socket){
     connections.push(socket);
     console.log('Connected; %s sockets connected',connections.length);
-    socket.on('send sockets', function(data){
-        console.log(data);
-        io.sockets.emit('getsocket', connections.length);
-    });
+    // socket.on('send sockets', function(data){
+    //     console.log(data);
+    //     io.sockets.emit('getsocket', connections.length);
+    // });
     
     
     
@@ -75,11 +75,11 @@ io.sockets.on('connection',function(socket){
 
     });
 
-//     socket.on('send message',function(data){
-//         //console.log(data);
-//         io.sockets.emit('new message', {msg:data, user:socket.username});
-        
-//     });
+    socket.on('send message',function(data){
+        //console.log(data);
+        // io.sockets.emit('new message', {msg:data, user:socket.username});
+        io.sockets.emit('new message', {msg:data});
+    });
 
 //     socket.on('new user', function(data){
 //         // callback(true);

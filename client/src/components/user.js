@@ -2,19 +2,8 @@ import React, { Component } from "react";
 import openSocket from 'socket.io-client';
 
 
-// function getClients(){
-//   num=0;
-//   socket.on('getsocket', function(data){
-//     num=data;
-//   });
-//   return num;
-// }
-export default class Custom extends Component {
+export default class Message extends Component {
 
-
-//   state={
-//     users: []
-//   }
     constructor(props) {
         super(props);
 
@@ -36,10 +25,10 @@ export default class Custom extends Component {
   //       .then(res=>this.setState({ users: res }))
   //       .catch(err => console.error(err));
   // }
-  componentDidMount(){
-    const socket = openSocket('http://localhost:5000');
-    socket.emit('send sockets', "Sending sockets");
-  }
+  // componentDidMount(){
+  //   const socket = openSocket('http://localhost:5000');
+  //   socket.emit('send sockets', "Sending sockets");
+  // }
   
   setUsers = (users) => {
     this.setState({ users })
@@ -48,11 +37,11 @@ export default class Custom extends Component {
   
   render(){
     const { users }=this.state;
-    const socket = openSocket('http://localhost:5000');
+    // const socket = openSocket('http://localhost:5000');
     
-    socket.on('getsocket', (data) => {
-      this.setUsers(data);
-    })
+    // socket.on('getsocket', (data) => {
+    //   this.setUsers(data);
+    // })
     // const listitems=users.map(this.renderUser);
     return (
       <div className="custo">

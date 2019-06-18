@@ -2,7 +2,8 @@ import React from 'react';
 
 // import logo from './logo.svg';
 import './App.css';
-import Custom from './components/user';
+// import Custom from './components/user';
+import Message from './components/message';
 import Login from './components/login';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
@@ -13,8 +14,9 @@ function App() {
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header> */}
-      <Custom />
+      {/* <Custom /> */}
       {/* <Login /> */}
+      <Message />
     </div>
   );
 }
